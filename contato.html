@@ -1,0 +1,67 @@
+!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" /> <!-- configura a codificação de caracteres do navegador para o UTF-8-->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" /> <!-- Adiciona o ícone de aba de navegador-->
+        <title>CONTATO - IFSP-PTB - DWBA4</title> <!-- Adiciona o título na aba do navegador-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header id="cabecalho"> <!-- Indica o cabeçalho do nosso documento-->
+            <nav> 
+                <iframe src="menu.html" frameborder="0" height="250px" style="width: 100%" scrolling="no"></iframe> <!--Traz o html menu como parte da página-->
+            </nav>
+        </header>
+
+        <main>
+            <h1>Mande uma mensagem</h1>
+            <form>
+                <ul>
+                    <li> 
+                        <label for="nome">Nome </label>
+                        <input type="text" id="nome" name="nome" required>
+                    </li>
+                    <li>
+                        <label for="email">E-mail</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </li>
+                    <li>
+                        <label for="telefone">Telefone (99) 99999-9999</label><br>
+                        <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s?\d{5}-\d{4}" required>
+                    </li>
+                    <li>
+                        <label for="assunto">Assunto</label><br>
+                        <select id="assunto" name="assunto" required>
+                            <option value="" disabled selected>-- Selecione --</option>
+                            <option value="reclamacao">Reclamação</option>
+                            <option value="sugestao">Sugestão</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="mensagem">Mensagem</label><br>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <legend>Opções de Resposta</legend>
+                                <label for="respEmail">E-mail </label>
+                                <input type="radio" id="respEmail" value="respEmail" name="opcoesResp" required>
+                                <label for="respTel">Telefone </label>
+                                <input type="radio" id="respTel" value="respTel" name="opcoesResp" required>
+                        </fieldset>
+                    </li>
+                </ul>
+                <button type="submit" class="botao">Enviar</button>
+            </form>
+        </main>
+
+        <footer>
+            <br/><br/>
+            <nav>
+                <object width="100%" data="rodape.html"></object>
+            </nav>          
+        </footer>
+    </body>
+</html>
